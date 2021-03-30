@@ -5,7 +5,7 @@
             <div class="col-lg-6 col-md-8">
                 <div class="title text-center mb-5">
                     <h3 class="font-weight-normal text-dark">A solo <span class="text-warning"> un clic</span></h3>
-                    <p class="text-muted">  </p>
+                    <p class="text-muted"> </p>
                 </div>
             </div>
         </div>
@@ -15,19 +15,21 @@
                 <div class="contact-address">
                     <h4 class="text-dark mb-4">Información de Contacto</h4>
                     <p class="text-muted f-15">Dejanos tus datos y a la brevedad nos estaremos contactando usted.</p>
-                    <p class="text-muted f-15 mb-4">   </p>
+                    <p class="text-muted f-15 mb-4"> </p>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="contact-address">
                             <h5 class="text-dark mb-3 f-16">Dirección - A</h5>
-                            <p class="text-muted f-15">Santa Rosa de Copán, barrio Santa Teresa, frente a kinder Federico Canales, edificio OCCIPAT segunda planta cubículo # 1</p>
+                            <p class="text-muted f-15">Santa Rosa de Copán, barrio Santa Teresa, frente a kinder
+                                Federico Canales, edificio OCCIPAT segunda planta cubículo # 1</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="contact-address">
                             <h5 class="text-dark mb-3 f-16">Dirección - B</h5>
-                            <p class="text-muted f-15">San Marcos Ocotepeque, Barrio San Juan, Edificio Mas Por Menos</p>
+                            <p class="text-muted f-15">San Marcos Ocotepeque, Barrio San Juan, Edificio Mas Por Menos
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -55,31 +57,38 @@
                             <div class="col-lg-6">
                                 <div class="form-group app-label">
                                     <label for="name">Nombre</label>
-                                    <input name="name" id="name" type="text" class="form-control" placeholder="Coloca tu nombre..">
+                                    <input [(ngModel)]="form.name" [ngModelOptions]="{standalone: true}" name="name"
+                                        id="name" type="text" class="form-control" placeholder="Coloca tu nombre..">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group app-label">
                                     <label for="email">Correo Electrónico</label>
-                                    <input name="email" id="email" type="email" class="form-control" placeholder="Coloca tu correo..">
+                                    <input [(ngModel)]="form.email" [ngModelOptions]="{standalone: true}" name="email"
+                                        id="email" type="email" class="form-control" placeholder="Coloca tu correo..">
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-group app-label">
                                     <label for="subject">Asunto</label>
-                                    <input type="text" class="form-control" id="subject" placeholder="Coloca el motivo de tu consulta.." />
+                                    <input [(ngModel)]="form.subject" [ngModelOptions]="{standalone: true}" type="text"
+                                        class="form-control" id="subject"
+                                        placeholder="Coloca el motivo de tu consulta.." />
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-group app-label">
                                     <label for="comments">Mensaje</label>
-                                    <textarea name="comments" id="comments" rows="3" class="form-control" placeholder="Coloca un mensaje mas detallado.."></textarea>
+                                    <textarea [(ngModel)]="form.message" [ngModelOptions]="{standalone: true}"
+                                        name="comments" id="comments" rows="3" class="form-control"
+                                        placeholder="Coloca un mensaje mas detallado.."></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
-                                <button type="submit" id="submit" name="send" class="btn btn-warning">Enviar Mensaje <i class="mdi mdi-telegram ml-2"></i></button>
+                                <button type="submit" id="submit" name="send" class="btn btn-warning"
+                                    (click)="send()">Enviar Mensaje <i class="mdi mdi-telegram ml-2"></i></button>
                                 <div id="simple-msg"></div>
                             </div>
                         </div>

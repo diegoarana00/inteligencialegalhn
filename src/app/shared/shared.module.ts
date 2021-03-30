@@ -11,14 +11,18 @@ import { ContactComponent } from './contact/contact.component';
 import { FeaturesComponent } from './features/features.component';
 import { FooterComponent } from './footer/footer.component';
 import { ServicesComponent } from './services/services.component';
+import { ContactSuccessComponent } from './contact/contact-success/contact-success.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
 @NgModule({
-  declarations: [AboutComponent, ClientsComponent, ContactComponent, FeaturesComponent, FooterComponent, ServicesComponent, ScrollspyDirective],
+  declarations: [AboutComponent, ClientsComponent, ContactComponent, FeaturesComponent, FooterComponent, ServicesComponent, ScrollspyDirective, ContactSuccessComponent],
+  entryComponents: [ContactSuccessComponent],
   imports: [
-    CommonModule, CarouselModule, CountToModule
+    CommonModule, CarouselModule, CountToModule, FormsModule, HttpClientModule
   ],
-  exports: [AboutComponent, ClientsComponent, ContactComponent, FeaturesComponent, FooterComponent, ServicesComponent, ScrollspyDirective]
+  exports: [AboutComponent, ClientsComponent, ContactComponent, FeaturesComponent, FooterComponent, ServicesComponent, ScrollspyDirective, ContactSuccessComponent]
 })
 export class SharedModule { }
